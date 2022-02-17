@@ -1,6 +1,6 @@
 FROM node:alpine as builder
 WORKDIR '/app'
-COPY package.json .0
+COPY package.json .
 COPY ./ ./
 CMD echo '${pwd}'
 RUN npm run build

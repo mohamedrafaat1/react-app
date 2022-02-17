@@ -2,7 +2,7 @@ FROM node:alpine as builder
 WORKDIR '/app'
 COPY package.json .
 COPY ./ .
-CMD echo '${pwd}'
+CMD  pwd
 RUN npm run build
 
 FROM nginx
